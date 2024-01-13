@@ -2,8 +2,8 @@ package com.n0rthl1ght.graphics.task1.elements;
 
 import java.awt.*;
 public class Sea {
-    private int startX;
-    private int startY;
+    private final int startX;
+    private final int startY;
 
     public Sea(int startX, int startY) {
         this.startX = startX;

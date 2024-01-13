@@ -14,6 +14,7 @@ public class DrawPanel extends JPanel {
     private Sea sea;
     private List<Mountain> mountains;
     private List<Wave> wv;
+    private List<MountainDetails> md;
     public DrawPanel() {
         bg = new Background();
         sea = new Sea(0,450);
@@ -35,6 +36,13 @@ public class DrawPanel extends JPanel {
         mountains.add(MountainCreator.createM4());
         mountains.add(MountainCreator.createM5());
 
+        md = new ArrayList<MountainDetails>();
+        md.add(MDCreator.detail1());
+        md.add(MDCreator.detail2());
+        md.add(MDCreator.detail3());
+        md.add(MDCreator.detail4());
+        md.add(MDCreator.detail5());
+
 
     }
 
@@ -49,11 +57,13 @@ public class DrawPanel extends JPanel {
         sea.draw(g,getWidth(),getHeight());
 
         for(Wave i: wv){
-            i.draw(g, getWidth(),getHeight());
+            i.draw(g);
         }
-
         for(Mountain i: mountains){
-            i.draw(g, getWidth(),getHeight());
+            i.draw(g);
+        }
+        for (MountainDetails i : md) {
+            i.draw(g);
         }
     }
 }

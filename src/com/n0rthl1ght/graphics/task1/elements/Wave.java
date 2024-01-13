@@ -3,10 +3,10 @@ package com.n0rthl1ght.graphics.task1.elements;
 import java.awt.*;
 
 public class Wave {
-    private int startX;
-    private int startY;
-    private int endX;
-    private int endY;
+    private final int startX;
+    private final int startY;
+    private final int endX;
+    private final int endY;
 
     private Color col = new Color(83,83,83);
 
@@ -17,7 +17,7 @@ public class Wave {
         this.endY = endY;
     }
 
-    public void draw(Graphics2D g, int w, int h){
+    public void draw(Graphics2D g){
         g.setPaint(col);
         g.drawLine(startX,startY,endX,endY);
     }

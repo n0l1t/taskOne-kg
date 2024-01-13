@@ -3,21 +3,20 @@ package com.n0rthl1ght.graphics.task1.elements;
 import java.awt.*;
 
 public class Mountain {
-    private int[] shiftX;
-    private int[] shiftY;
-    private Color colors;
+    private final int[] shiftX;
+    private final int[] shiftY;
+    private final Color MountainColor = new Color(152, 154, 144);
+    private final Color OutlineColor = new Color(83,83,83);
 
-    public Mountain(int[] shiftX, int[] shiftY, Color colors) {
+    public Mountain(int[] shiftX, int[] shiftY) {
         this.shiftX = shiftX;
         this.shiftY = shiftY;
-        this.colors = colors;
     }
 
-    public void draw(Graphics2D g, int w, int h){
-        g.setPaint(colors);
+    public void draw(Graphics2D g){
+        g.setPaint(MountainColor);
         g.fillPolygon(shiftX, shiftY,shiftY.length);
-        Color c1 = new Color(83,83,83);
-        g.setPaint(c1);
+        g.setPaint(OutlineColor);
         g.setStroke(new BasicStroke(2));
         g.drawPolyline(shiftX,shiftY,shiftY.length);
         g.drawLine(shiftX[0],shiftY[0],shiftX[shiftX.length-1],shiftY[shiftY.length-1]);
