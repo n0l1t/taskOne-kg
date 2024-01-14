@@ -27,4 +27,9 @@ public class MountainCreator {
         int[] y = {530,505,510,500,495,515,530};
         return new Mountain(x,y);
     }
+    public static Mountain createM6(){
+        int[] x = {435,450,460,475,500,505};
+        int[] y = {465,440,435,420,420,465};
+        return new Mountain(x,y);
+    }
 }

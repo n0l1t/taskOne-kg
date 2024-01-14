@@ -20,7 +20,6 @@ public class DrawPanel extends JPanel {
         sea = new Sea(0,450);
 
         wv = new ArrayList<Wave>();
-
         for (int i = 20; i < 700; i=i+rnd.nextInt(10,50)) {
             int startX = i;
             int startY = rnd.nextInt(455, 750);
@@ -30,6 +29,7 @@ public class DrawPanel extends JPanel {
         }
 
         mountains = new ArrayList<Mountain>();
+        mountains.add(MountainCreator.createM6());
         mountains.add(MountainCreator.createM1());
         mountains.add(MountainCreator.createM2());
         mountains.add(MountainCreator.createM3());
@@ -37,11 +37,15 @@ public class DrawPanel extends JPanel {
         mountains.add(MountainCreator.createM5());
 
         md = new ArrayList<MountainDetails>();
-        md.add(MDCreator.detail1());
-        md.add(MDCreator.detail2());
-        md.add(MDCreator.detail3());
-        md.add(MDCreator.detail4());
-        md.add(MDCreator.detail5());
+        md.add(MountainDetailsCreator.detail1());
+        md.add(MountainDetailsCreator.detail2());
+        md.add(MountainDetailsCreator.detail3());
+        md.add(MountainDetailsCreator.detail4());
+        md.add(MountainDetailsCreator.detail5());
+        md.add(MountainDetailsCreator.detail6());
+        md.add(MountainDetailsCreator.detail7());
+        md.add(MountainDetailsCreator.detail8());
+        md.add(MountainDetailsCreator.detail9());
 
 
     }

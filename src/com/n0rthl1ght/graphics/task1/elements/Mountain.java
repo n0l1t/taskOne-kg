@@ -5,7 +5,7 @@ import java.awt.*;
 public class Mountain {
     private final int[] shiftX;
     private final int[] shiftY;
-    private final Color MountainColor = new Color(152, 154, 144);
+    private final Color MountainColor = new Color(141, 142, 134);
     private final Color OutlineColor = new Color(83,83,83);
 
     public Mountain(int[] shiftX, int[] shiftY) {
