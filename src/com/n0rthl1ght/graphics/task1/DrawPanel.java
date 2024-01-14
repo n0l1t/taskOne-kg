@@ -15,6 +15,7 @@ public class DrawPanel extends JPanel {
     private List<Mountain> mountains;
     private List<Wave> wv;
     private List<MountainDetails> md;
+    private List<Lighthouse> lh;
     public DrawPanel() {
         bg = new Background();
         sea = new Sea(0,450);
@@ -47,6 +48,18 @@ public class DrawPanel extends JPanel {
         md.add(MountainDetailsCreator.detail8());
         md.add(MountainDetailsCreator.detail9());
 
+        lh = new ArrayList<Lighthouse>();
+        lh.add(LighthouseElementCreator.element1R());
+        lh.add(LighthouseElementCreator.element1W());
+        lh.add(LighthouseElementCreator.element2R());
+        lh.add(LighthouseElementCreator.element2W());
+        lh.add(LighthouseElementCreator.element3R());
+        lh.add(LighthouseElementCreator.element3W());
+        lh.add(LighthouseElementCreator.element4R());
+        lh.add(LighthouseElementCreator.element4W());
+        lh.add(LighthouseElementCreator.element4E());
+        lh.add(LighthouseElementCreator.element5R());
+        lh.add(LighthouseElementCreator.element6R());
 
     }
 
@@ -67,6 +80,9 @@ public class DrawPanel extends JPanel {
             i.draw(g);
         }
         for (MountainDetails i : md) {
+            i.draw(g);
+        }
+        for (Lighthouse i : lh) {
             i.draw(g);
         }
     }

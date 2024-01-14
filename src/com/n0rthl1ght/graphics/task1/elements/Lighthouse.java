@@ -2,19 +2,20 @@ package com.n0rthl1ght.graphics.task1.elements;
 
 import java.awt.*;
 
-public class Mountain {
+public class Lighthouse {
     private final int[] shiftX;
     private final int[] shiftY;
-    private final Color MountainColor = new Color(141, 142, 134);
+    private final Color LHElementColor;
     private final Color OutlineColor = new Color(83,83,83);
 
-    public Mountain(int[] shiftX, int[] shiftY) {
+    public Lighthouse(int[] shiftX, int[] shiftY, Color LHElementColor) {
         this.shiftX = shiftX;
         this.shiftY = shiftY;
+        this.LHElementColor = LHElementColor;
     }
 
     public void draw(Graphics2D g){
-        g.setPaint(MountainColor);
+        g.setPaint(LHElementColor);
         g.fillPolygon(shiftX, shiftY,shiftY.length);
         g.setPaint(OutlineColor);
         g.setStroke(new BasicStroke(2));
