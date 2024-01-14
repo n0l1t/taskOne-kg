@@ -4,6 +4,8 @@ import java.awt.*;
 public class Sea {
     private final int startX;
     private final int startY;
+    private final Color SeaColor = new Color(180,220,220);
+    private final Color OutlineColor = new Color(83,83,83);
 
     public Sea(int startX, int startY) {
         this.startX = startX;
@@ -11,12 +13,10 @@ public class Sea {
     }
 
     public void draw(Graphics2D g, int w, int h){
-        Color col = new Color(103,183,212);
-        g.setPaint(col);
+        g.setPaint(SeaColor);
         g.fillRect(startX,startY,w,h);
 
-        Color c1 = new Color(83,83,83);
-        g.setPaint(c1);
+        g.setPaint(OutlineColor);
         g.setStroke(new BasicStroke(2));
         g.drawLine(startX,startY,800,startY);
     }

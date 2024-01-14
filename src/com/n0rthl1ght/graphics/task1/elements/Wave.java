@@ -8,7 +8,7 @@ public class Wave {
     private final int endX;
     private final int endY;
 
-    private Color col = new Color(83,83,83);
+    private Color WaveColor = new Color(83,83,83);
 
     public Wave(int startX, int startY, int endX, int endY) {
         this.startX = startX;
@@ -18,7 +18,7 @@ public class Wave {
     }
 
     public void draw(Graphics2D g){
-        g.setPaint(col);
+        g.setPaint(WaveColor);
         g.drawLine(startX,startY,endX,endY);
     }
 }

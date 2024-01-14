@@ -3,7 +3,7 @@ import java.awt.*;
 public class MountainDetails {
     private final int[] shiftX;
     private final int[] shiftY;
-    private final Color col = new Color(83,83,83);
+    private final Color DetailColor = new Color(83,83,83);
 
     public MountainDetails(int[] shiftX, int[] shiftY){
         this.shiftX=shiftX;
@@ -11,7 +11,7 @@ public class MountainDetails {
     }
 
     public void draw(Graphics2D g){
-        g.setPaint(col);
+        g.setPaint(DetailColor);
         g.drawPolyline(shiftX,shiftY,shiftY.length);
     }
 }

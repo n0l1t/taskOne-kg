@@ -1,6 +1,5 @@
 package com.n0rthl1ght.graphics.task1.elements;
 
-import java.awt.*;
 public class MountainCreator {
     public static Mountain createM1(){
         int[] x = {450,465,490,490,500,520,515,530,520,535,550,620,640,705,740,755,800,810};
