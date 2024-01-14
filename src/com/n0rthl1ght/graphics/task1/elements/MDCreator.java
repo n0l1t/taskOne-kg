@@ -2,7 +2,7 @@ package com.n0rthl1ght.graphics.task1.elements;
 
 public class MDCreator {
     public static MountainDetails detail1(){
-        int[] x = {280,300,315};
+        int[] x = {380,300,315};
         int[] y = {535,535,525};
         return new MountainDetails(x,y);
     }
