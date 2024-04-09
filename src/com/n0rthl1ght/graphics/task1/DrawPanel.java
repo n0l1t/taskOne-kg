@@ -13,9 +13,11 @@ public class DrawPanel extends JPanel {
     private Background bg;
     private Sea sea;
     private List<Mountain> mountains;
+    private List<Mountain> mountains2;
     private List<Wave> wv;
     private List<MountainDetails> md;
     private List<Lighthouse> lh;
+    private List<Clouds> cl;
     public DrawPanel() {
         bg = new Background();
         sea = new Sea(0,450);
@@ -29,13 +31,17 @@ public class DrawPanel extends JPanel {
             wv.add(WavesCreator.createWave(startX,startY,endX,endY));
         }
 
+        cl = new ArrayList<Clouds>();
+        for(int i = -30; i < 900; i=i+rnd.nextInt(60,80)){
+            int x0 = i;
+            int y0 = rnd.nextInt(5, 300);
+            int wdth = rnd.nextInt(10,130);
+            cl.add(CloudsCreator.createCloud(x0,y0,wdth));
+        }
+
         mountains = new ArrayList<Mountain>();
         mountains.add(MountainCreator.createM6());
         mountains.add(MountainCreator.createM1());
-        mountains.add(MountainCreator.createM2());
-        mountains.add(MountainCreator.createM3());
-        mountains.add(MountainCreator.createM4());
-        mountains.add(MountainCreator.createM5());
 
         md = new ArrayList<MountainDetails>();
         md.add(MountainDetailsCreator.detail1());
@@ -49,6 +55,8 @@ public class DrawPanel extends JPanel {
         md.add(MountainDetailsCreator.detail9());
 
         lh = new ArrayList<Lighthouse>();
+        lh.add(LighthouseElementCreator.elementH1W());
+        lh.add(LighthouseElementCreator.elementH2R());
         lh.add(LighthouseElementCreator.element1R());
         lh.add(LighthouseElementCreator.element1W());
         lh.add(LighthouseElementCreator.element2R());
@@ -56,11 +64,22 @@ public class DrawPanel extends JPanel {
         lh.add(LighthouseElementCreator.element3R());
         lh.add(LighthouseElementCreator.element3W());
         lh.add(LighthouseElementCreator.element4R());
+        lh.add(LighthouseElementCreator.elementB1());
         lh.add(LighthouseElementCreator.element4W());
+        lh.add(LighthouseElementCreator.elementB2());
+        lh.add(LighthouseElementCreator.elementB3());
         lh.add(LighthouseElementCreator.element4E());
+        lh.add(LighthouseElementCreator.elementW1());
+        lh.add(LighthouseElementCreator.elementW2());
+        lh.add(LighthouseElementCreator.elementW3());
         lh.add(LighthouseElementCreator.element5R());
         lh.add(LighthouseElementCreator.element6R());
 
+        mountains2 = new ArrayList<Mountain>();
+        mountains2.add(MountainCreator.createM2());
+        mountains2.add(MountainCreator.createM3());
+        mountains2.add(MountainCreator.createM4());
+        mountains2.add(MountainCreator.createM5());
     }
 
     @Override
@@ -79,10 +98,16 @@ public class DrawPanel extends JPanel {
         for(Mountain i: mountains){
             i.draw(g);
         }
+        for (Lighthouse i : lh) {
+            i.draw(g);
+        }
+        for(Mountain i: mountains2){
+            i.draw(g);
+        }
         for (MountainDetails i : md) {
             i.draw(g);
         }
-        for (Lighthouse i : lh) {
+        for (Clouds i : cl) {
             i.draw(g);
         }
     }

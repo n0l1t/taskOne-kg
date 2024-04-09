@@ -3,8 +3,17 @@ package com.n0rthl1ght.graphics.task1.elements;
 import java.awt.*;
 
 public class LighthouseElementCreator {
-    private final Color LHWhite = new Color(255,255,255);
-    private final Color LHWRed = new Color(218,93,82);
+
+    public static Lighthouse elementH1W(){
+        int[] x = {625, 625, 710, 710};
+        int[] y = {400, 365, 365, 400};
+        return new Lighthouse(x,y,new Color(255,255,255));
+    }
+    public static Lighthouse elementH2R(){
+        int[] x = {620, 635, 705, 715};
+        int[] y = {365, 345, 345, 365};
+        return new Lighthouse(x,y,new Color(218,93,82));
+    }
     public static Lighthouse element1R(){
         int[] x = {560,565,645,650};
         int[] y = {400,380,380,400};
@@ -40,6 +49,21 @@ public class LighthouseElementCreator {
         int[] y = {230,220,220,230};
         return new Lighthouse(x,y,new Color(218,93,82));
     }
+    public static Lighthouse elementB1(){
+        int[] x = {580,580};
+        int[] y = {220,210};
+        return new Lighthouse(x,y,new Color(185,223,226));
+    }
+    public static Lighthouse elementB2(){
+        int[] x = {630,630};
+        int[] y = {220,210};
+        return new Lighthouse(x,y,new Color(185,223,226));
+    }
+    public static Lighthouse elementB3(){
+        int[] x = {580,630};
+        int[] y = {215,215};
+        return new Lighthouse(x,y,new Color(185,223,226));
+    }
     public static Lighthouse element4W(){
         int[] x = {590,590,620,620};
         int[] y = {220,210,210,220};
@@ -48,6 +72,23 @@ public class LighthouseElementCreator {
     public static Lighthouse element4E(){
         int[] x = {590,590,620,620};
         int[] y = {210,180,180,210};
+        return new Lighthouse(x,y,new Color(185,223,226));
+    }
+    public static Lighthouse elementW1(){
+        int[] x = {600,600};
+        int[] y = {180,210};
+        return new Lighthouse(x,y,new Color(185,223,226));
+    }
+
+    public static Lighthouse elementW2(){
+        int[] x = {610,610};
+        int[] y = {180,210};
+        return new Lighthouse(x,y,new Color(185,223,226));
+    }
+
+    public static Lighthouse elementW3(){
+        int[] x = {590,620};
+        int[] y = {195,195};
         return new Lighthouse(x,y,new Color(185,223,226));
     }
     public static Lighthouse element5R(){
@@ -60,4 +101,6 @@ public class LighthouseElementCreator {
         int[] y = {175,160,175};
         return new Lighthouse(x,y,new Color(218,93,82));
     }
+
+
 }
